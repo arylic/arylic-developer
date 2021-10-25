@@ -1,0 +1,76 @@
+---
+---
+
+// see: /_sass/addon/commons.scss
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "jekyll-theme-chirpy";
+
+html[mode=light] {
+    --sidebar-bg: rgba(151, 164, 171, 1);
+}
+
+html[mode=dark] {
+    --sidebar-bg: rgba(45, 46, 48, 1);
+}
+
+#sidebar {
+    a {
+        color: var(--text-color);
+    }
+
+    #avatar img {
+        color: var(--text-color);
+        &:hover {
+            -ms-transform: none;
+            -moz-transform: none;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    .profile-wrapper {
+        margin-top: 1rem;
+        #avatar {
+            margin-left: 0em;
+            > a {
+                width: 100%;
+                height: 100%;
+                display: block;
+                overflow: hidden;
+                border: none;
+            }
+        }
+    }
+
+    .sidebar-bottom {
+        padding-left: 0;
+
+        &.justify-content-center {
+            -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+        }
+
+        #mode-toggle-wrapper {
+            i {
+                color: var(--text-color);
+            }
+        }
+        
+    }
+
+    ul {
+      .nav-item {
+        .nav-link {
+          > i {
+              height: 2.2rem;
+              width: 2.2rem;
+              font-size: 1.05rem;
+              padding-top: 0.3rem;
+              position: relative;
+          }
+        }
+      }
+    }
+}
